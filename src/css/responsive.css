@@ -1,0 +1,324 @@
+/* ==================== RESPONSIVE DESIGN ====================*/
+
+/* ========== TABLET LANDSCAPE (1024px) ==========*/
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  section {
+    padding: 80px 30px;
+  }
+
+  .seccion-titulo h2 {
+    font-size: 36px;
+  }
+
+  .caracteristica-card,
+  .paso,
+  .seccion-item {
+    padding: 24px;
+  }
+}
+
+/* ========== TABLET PORTRAIT (768px) ==========*/
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  body {
+    line-height: 1.5;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+
+  .seccion-titulo {
+    margin-bottom: 40px;
+  }
+
+  .seccion-titulo h2 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 85vh;
+    padding: 40px 20px;
+  }
+
+  .hero-contenido {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero-texto h1 {
+    font-size: 44px;
+  }
+
+  .hero-subtitulo {
+    font-size: 20px;
+  }
+
+  .hero-descripcion {
+    font-size: 16px;
+  }
+
+  /* GRILLAS */
+  .caracteristicas-grid,
+  .pasos-flujo,
+  .secciones-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .caracteristica-card,
+  .paso,
+  .seccion-item {
+    padding: 16px;
+  }
+
+  .paso-numero {
+    font-size: 48px;
+  }
+
+  /* CARDS */
+  .card-imagen {
+    height: 160px;
+  }
+
+  .caracteristica-card h3 {
+    padding: 16px 16px 0;
+    font-size: 16px;
+  }
+
+  .caracteristica-card p {
+    padding: 0 16px;
+    font-size: 13px;
+  }
+
+  .metodos-lista {
+    padding: 0 16px 16px;
+  }
+
+  /* ESPACIADO REDUCIDO */
+  :root {
+    --espacio-3xl: 60px;
+    --espacio-2xl: 40px;
+    --font-4xl: 44px;
+    --font-3xl: 32px;
+  }
+}
+
+/* ========== MÓVIL HORIZONTAL (480px) ==========*/
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    line-height: 1.4;
+  }
+
+  section {
+    padding: 40px 16px;
+  }
+
+  .seccion-titulo {
+    margin-bottom: 30px;
+  }
+
+  .seccion-titulo h2 {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    padding: 30px 16px;
+  }
+
+  .hero::before,
+  .hero::after {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero-contenido {
+    gap: 20px;
+  }
+
+  .hero-texto h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+
+  .hero-subtitulo {
+    font-size: 18px;
+  }
+
+  .hero-descripcion {
+    font-size: 14px;
+  }
+
+  .hero-parrafo {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* CARDS */
+  .caracteristica-card,
+  .paso,
+  .seccion-item {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .caracteristica-card h3,
+  .paso h3,
+  .seccion-item h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .caracteristica-card p,
+  .paso p,
+  .seccion-item p {
+    font-size: 13px;
+  }
+
+  .card-imagen {
+    height: 140px;
+  }
+
+  .metodos-lista li {
+    font-size: 11px;
+    padding-left: 12px;
+  }
+
+  /* GRILLAS */
+  .caracteristicas-grid,
+  .pasos-flujo,
+  .secciones-grid {
+    gap: 12px;
+  }
+
+  /* VARIABLES REDUCIDAS */
+  :root {
+    --espacio-3xl: 40px;
+    --espacio-2xl: 30px;
+    --espacio-xl: 20px;
+    --espacio-lg: 16px;
+    --font-4xl: 32px;
+    --font-3xl: 24px;
+    --font-2xl: 20px;
+  }
+}
+
+/* ========== MÓVIL PEQUEÑO (320px) ==========*/
+
+@media (max-width: 320px) {
+  html {
+    font-size: 12px;
+  }
+
+  body {
+    line-height: 1.3;
+  }
+
+  section {
+    padding: 30px 12px;
+  }
+
+  .hero {
+    min-height: 100vh;
+    padding: 20px 12px;
+  }
+
+  .hero-texto h1 {
+    font-size: 28px;
+  }
+
+  .hero-subtitulo {
+    font-size: 16px;
+  }
+
+  .seccion-titulo h2 {
+    font-size: 20px;
+  }
+
+  .caracteristica-card,
+  .paso,
+  .seccion-item {
+    padding: 10px;
+  }
+
+  .card-imagen {
+    height: 120px;
+  }
+
+  .paso-numero {
+    font-size: 28px;
+  }
+
+  :root {
+    --espacio-lg: 12px;
+    --espacio-md: 12px;
+    --espacio-sm: 6px;
+  }
+}
+
+/* ========== IMPRESIÓN ==========*/
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+
+  .hero::before,
+  .hero::after {
+    display: none;
+  }
+
+  .caracteristica-card,
+  .paso,
+  .seccion-item {
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+}
+
+/* ========== PREFERS REDUCED MOTION ==========*/
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

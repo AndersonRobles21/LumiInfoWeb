@@ -1,0 +1,90 @@
+/* ==================== VARIABLES CSS ====================*/
+
+:root {
+  /* ========== FONDOS ==========*/
+  --fondo-base: #04010e;
+  --fondo-tarjeta: rgba(18, 14, 38, 0.75);
+  --fondo-tarjeta-hover: rgba(28, 22, 58, 0.85);
+
+  /* ========== COLORES NEÓN ==========*/
+  --color-cyan-neon: #00f0ff;
+  --color-cyan-glow: rgba(0, 240, 255, 0.35);
+  --color-purpura-neon: #d946ef;
+
+  /* ========== TEXTO ==========*/
+  --color-texto-principal: #ffffff;
+  --color-texto-secundario: #94a3b8;
+  --color-texto-terciario: #64748b;
+
+  /* ========== ALERTAS ==========*/
+  --color-rojo-peligro: #ff4d4d;
+  --color-verde-exito: #00ff88;
+  --color-amarillo-aviso: #ffaa00;
+
+  /* ========== BORDES ==========*/
+  --borde-cristal: 1px solid rgba(255, 255, 255, 0.08);
+  --borde-activo-cyan: 1px solid #00f0ff;
+  --borde-activo-purpura: 1px solid #d946ef;
+
+  /* ========== SOMBRAS ==========*/
+  --sombra-cyan-glow: 0 0 18px rgba(0, 240, 255, 0.3);
+  --sombra-tarjeta: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --sombra-purpura: 0 0 20px rgba(217, 70, 239, 0.25);
+  --sombra-profunda: 0 20px 50px rgba(0, 0, 0, 0.6);
+
+  /* ========== RADIOS ==========*/
+  --radio-boton: 12px;
+  --radio-tarjeta: 16px;
+  --radio-grande: 20px;
+
+  /* ========== TRANSICIONES ==========*/
+  --transicion-rápida: all 0.2s ease;
+  --transicion-normal: all 0.3s ease;
+  --transicion-lenta: all 0.5s ease;
+
+  /* ========== ESPACIADO ==========*/
+  --espacio-xs: 4px;
+  --espacio-sm: 8px;
+  --espacio-md: 16px;
+  --espacio-lg: 24px;
+  --espacio-xl: 40px;
+  --espacio-2xl: 60px;
+  --espacio-3xl: 100px;
+
+  /* ========== TAMAÑOS DE FUENTE ==========*/
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-base: 16px;
+  --font-lg: 18px;
+  --font-xl: 20px;
+  --font-2xl: 28px;
+  --font-3xl: 44px;
+  --font-4xl: 80px;
+
+  /* ========== PESOS DE FUENTE ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extra-bold: 800;
+  --font-black: 900;
+}
+
+/* Tema oscuro activado por defecto */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo-base: #04010e;
+    --color-texto-principal: #ffffff;
+    --color-texto-secundario: #94a3b8;
+  }
+}
+
+/* Tema claro (opcional) */
+@media (prefers-color-scheme: light) {
+  :root {
+    --fondo-base: #f8f9fa;
+    --fondo-tarjeta: rgba(240, 240, 245, 0.9);
+    --color-texto-principal: #1a1a2e;
+    --color-texto-secundario: #475569;
+  }
+}

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ========== META TAGS ========== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LUMI - Tu compañero inteligente de estudio. Métodos personalizados, gamificación y IA para aprender mejor.">
+    <meta name="keywords" content="educación, IA, estudio, gamificación, aprendizaje">
+    <meta name="theme-color" content="#04010e">
+    <meta name="color-scheme" content="dark">
+    
+    <title>LUMI - Tu Compañero Inteligente de Estudio</title>
+
+    <!-- ========== ESTILOS CSS ========== -->
+    <!-- Reset y bases -->
+    <link rel="stylesheet" href="src/css/global/reset.css">
+    
+    <!-- Variables CSS -->
+    <link rel="stylesheet" href="src/css/global/variables.css">
+    
+    <!-- Componentes -->
+    <link rel="stylesheet" href="src/css/components/hero.css">
+    <link rel="stylesheet" href="src/css/components/sections.css">
+    <link rel="stylesheet" href="src/css/components/additional.css">
+    
+    <!-- Responsive -->
+    <link rel="stylesheet" href="src/css/responsive.css">
+
+    <!-- ========== LIBRERÍA QR CODE ========== -->
+    <!-- Reemplazar con tu CDN preferido si es necesario -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <!-- ========== SPLASH SCREEN ========== -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-contenido">
+            <img src="assets/Fondo_splash.png" alt="LUMI" class="splash-image">
+        </div>
+    </div>
+
+    <!-- ========== SECCIÓN HERO ========== -->
+    <section class="hero" id="hero">
+        <div class="hero-contenido">
+            <div class="hero-texto">
+                <h1>LUMI</h1>
+                <p class="hero-subtitulo">Tu Compañero Inteligente de Estudio</p>
+                <p class="hero-descripcion">Estudia mejor. Logra más.</p>
+                <p class="hero-parrafo">
+                    Transforma tu forma de aprender con métodos personalizados, gamificación inteligente 
+                    y un asistente IA que se adapta a tu ritmo.
+                </p>
+            </div>
+            <div class="hero-imagen">
+                <img 
+                    src="src/assets/img/robot-educacion.png" 
+                    alt="Robot educativo LUMI" 
+                    class="imagen-robot"
+                    onerror="this.style.display='none'"
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CARACTERÍSTICAS PRINCIPALES ========== -->
+    <section class="caracteristicas" id="caracteristicas">
+        <div class="seccion-titulo">
+            <span class="eyebrow">¿CÓMO FUNCIONA?</span>
+            <h2>Características Principales</h2>
+            <p>Descubre qué hace que LUMI sea diferente</p>
+        </div>
+
+        <div class="caracteristicas-grid">
+            <!-- Card 1: Métodos de Estudio -->
+            <div class="caracteristica-card">
+                <img src="assets/metodos.png" alt="Métodos de estudio" class="card-imagen" onerror="this.style.display='none'">
+                <h3>4 Métodos de Estudio Probados</h3>
+                <p>Elige entre técnicas científicamente validadas:</p>
+                <ul class="metodos-lista">
+                    <li><strong>Método Feynman:</strong> Explica para aprender</li>
+                    <li><strong>Técnica Pomodoro:</strong> Gestión del tiempo</li>
+                    <li><strong>Active Recall:</strong> Recordatorio activo</li>
+                    <li><strong>Spaced Repetition:</strong> Repetición espaciada</li>
+                </ul>
+            </div>
+
+            <!-- Card 2: Asistente IA -->
+            <div class="caracteristica-card">
+                <img src="assets/chat_ia.png" alt="Chat con IA" class="card-imagen" onerror="this.style.display='none'">
+                <h3>Asistente IA Personalizado</h3>
+                <p>Tu compañero inteligente que:</p>
+                <ul class="metodos-lista">
+                    <li>Genera planes de estudio personalizados</li>
+                    <li>Adapta el contenido a tu nivel</li>
+                    <li>Proporciona retroalimentación en tiempo real</li>
+                    <li>Sugiere métodos según tus necesidades</li>
+                </ul>
+            </div>
+
+            <!-- Card 3: Gamificación -->
+            <div class="caracteristica-card">
+                <img src="assets/lumi_gamificacion.png" alt="Gamificación" class="card-imagen" onerror="this.style.display='none'">
+                <h3>Gamificación Motivadora</h3>
+                <p>Aprende mientras te diviertes:</p>
+                <ul class="metodos-lista">
+                    <li>Sistema de puntos y XP</li>
+                    <li>Niveles y logros desbloqueables</li>
+                    <li>Rachas de constancia</li>
+                    <li>Recompensas virtuales</li>
+                </ul>
+            </div>
+
+            <!-- Card 4: Organización -->
+            <div class="caracteristica-card">
+                <img src="assets/tarea.png" alt="Tareas" class="card-imagen" onerror="this.style.display='none'">
+                <h3>Organización Inteligente</h3>
+                <p>Gestiona tu tiempo de estudio:</p>
+                <ul class="metodos-lista">
+                    <li>Calendario interactivo</li>
+                    <li>Plan de tareas automático</li>
+                    <li>Historial de progreso</li>
+                    <li>Estadísticas detalladas</li>
+                </ul>
+            </div>
+
+            <!-- Card 5: Análisis -->
+            <div class="caracteristica-card">
+                <img src="assets/historial_lumi.png" alt="Historial y progreso" class="card-imagen" onerror="this.style.display='none'">
+                <h3>Análisis y Reportes</h3>
+                <p>Visualiza tu progreso:</p>
+                <ul class="metodos-lista">
+                    <li>Dashboard personalizado</li>
+                    <li>Reportes de desempeño</li>
+                    <li>Métricas de aprendizaje</li>
+                    <li>Área de administración</li>
+                </ul>
+            </div>
+
+            <!-- Card 6: Panel Admin -->
+            <div class="caracteristica-card">
+                <img src="assets/racha.png" alt="Racha" class="card-imagen" onerror="this.style.display='none'">
+                <h3>Panel de Administrador</h3>
+                <p>Herramientas avanzadas:</p>
+                <ul class="metodos-lista">
+                    <li>Gestión de usuarios</li>
+                    <li>Modificación de perfiles</li>
+                    <li>Control de planes de estudio</li>
+                    <li>Estadísticas globales</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FLUJO DE FUNCIONAMIENTO ========== -->
+    <section class="como-funciona" id="flujo">
+        <div class="seccion-titulo">
+            <span class="eyebrow">FLUJO DE LA APP</span>
+            <h2>Tu Experiencia en LUMI</h2>
+            <p>Desde el registro hasta dominar nuevas habilidades</p>
+        </div>
+
+        <div class="pasos-flujo">
+            <div class="paso">
+                <div class="paso-numero">01</div>
+                <h3>Regístrate</h3>
+                <p>Crea tu cuenta con tu email y contraseña. Tu perfil almacena tu progreso y preferencias.</p>
+            </div>
+
+            <div class="paso">
+                <div class="paso-numero">02</div>
+                <h3>Configura tu Perfil</h3>
+                <p>Personaliza tu experiencia eligiendo tus horarios disponibles, áreas de interés y metas.</p>
+            </div>
+
+            <div class="paso">
+                <div class="paso-numero">03</div>
+                <h3>Crea un Plan</h3>
+                <p>Define qué quieres aprender. LUMI genera automáticamente un plan adaptado con IA.</p>
+            </div>
+
+            <div class="paso">
+                <div class="paso-numero">04</div>
+                <h3>Elige tu Método</h3>
+                <p>Selecciona entre 4 técnicas probadas. Cada método está optimizado para diferentes aprendizajes.</p>
+            </div>
+
+            <div class="paso">
+                <div class="paso-numero">05</div>
+                <h3>Estudia con IA</h3>
+                <p>Realiza actividades guiadas por el asistente. Obtén retroalimentación inmediata.</p>
+            </div>
+
+            <div class="paso">
+                <div class="paso-numero">06</div>
+                <h3>Desbloquea Logros</h3>
+                <p>Gana XP, sube de nivel y desbloquea insignias. Tu constancia se convierte en progreso.</p>
+            </div>
+
+            <div class="paso">
+                <div class="paso-numero">07</div>
+                <h3>Visualiza Estadísticas</h3>
+                <p>Accede a tu dashboard con métricas completas y análisis de desempeño.</p>
+            </div>
+
+            <div class="paso">
+                <div class="paso-numero">08</div>
+                <h3>Sigue Mejorando</h3>
+                <p>Usa el histórico de actividades para reforzar conceptos. La app mejora con tu uso.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TODAS LAS SECCIONES ========== -->
+    <section class="secciones-app" id="secciones">
+        <div class="seccion-titulo">
+            <span class="eyebrow">HERRAMIENTAS DISPONIBLES</span>
+            <h2>Todas las Secciones de LUMI</h2>
+            <p>Acceso a todas las herramientas que necesitas para aprender efectivamente</p>
+        </div>
+
+        <div class="secciones-grid">
+            <div class="seccion-item">
+                <h3>Dashboard</h3>
+                <p>Tu centro de control. Visualiza tareas del día, planes activos y progreso general.</p>
+            </div>
+
+            <div class="seccion-item">
+                <h3>Mis Tareas</h3>
+                <p>Crea y gestiona tus tareas de estudio. Asigna fechas y seguimiento automático.</p>
+            </div>
+
+            <div class="seccion-item">
+                <h3>Calendario</h3>
+                <p>Visualiza tu calendario de estudios. Ve actividades organizadas por fecha.</p>
+            </div>
+
+            <div class="seccion-item">
+                <h3>Mi Biblioteca</h3>
+                <p>Accede a recursos de estudio: apuntes, archivos, enlaces y materiales compartidos.</p>
+            </div>
+
+            <div class="seccion-item">
+                <h3>Mis Planes</h3>
+                <p>Gestiona todos tus planes de estudio. Edita, pausa o crea nuevos planes.</p>
+            </div>
+
+            <div class="seccion-item">
+                <h3>Chat con IA</h3>
+                <p>Conversa con tu asistente IA. Obtén ayuda, recomendaciones y aclaraciones al instante.</p>
+            </div>
+
+            <div class="seccion-item">
+                <h3>Logros y Recompensas</h3>
+                <p>Visualiza tus logros desbloqueados, XP ganado y recompensas virtuales.</p>
+            </div>
+
+            <div class="seccion-item">
+                <h3>Mi Perfil</h3>
+                <p>Personaliza tu cuenta, preferencias, notificaciones y configuración general.</p>
+            </div>
+
+            <div class="seccion-item">
+                <h3>Administrador</h3>
+                <p>Panel exclusivo para administradores. Gestión de usuarios y configuración avanzada.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== DESCARGA ========== -->
+    <section class="descarga" id="descarga">
+        <div class="seccion-titulo">
+            <span class="eyebrow">COMIENZA TU VIAJE</span>
+            <h2>Descarga LUMI Hoy</h2>
+        </div>
+
+        <div class="descarga-wrapper">
+            <!-- Imagen izquierda -->
+            <div class="descarga-imagen izquierda">
+                <img src="assets/Lumi_inicio.png" alt="Pantalla de inicio LUMI" class="app-screenshot" onerror="this.style.display='none'">
+            </div>
+
+            <!-- Centro con QR -->
+            <div class="descarga-qr-section">
+                <div id="qr-container" class="qr-container-vacio">
+                    <!-- QR will be generated here -->
+                </div>
+                <h3>Escanea para descargar</h3>
+                <p class="motivational-text">Disponible para iOS y Android. Transforma tu forma de estudiar.</p>
+            </div>
+
+            <!-- Imagen derecha -->
+            <div class="descarga-imagen derecha">
+                <img src="assets/Lumi_progreso.png" alt="Progreso LUMI" class="app-screenshot" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" id="footer">
+        <div class="footer-contenido">
+            <div class="footer-section">
+                <h4>LUMI</h4>
+                <p>Tu compañero inteligente de estudio</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#caracteristicas">Características</a></li>
+                    <li><a href="#flujo">Cómo Funciona</a></li>
+                    <li><a href="#secciones">Secciones</a></li>
+                    <li><a href="#descarga">Descargar</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Redes Sociales</h4>
+                <ul>
+                    <li><a href="#" target="_blank">Twitter</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                    <li><a href="#" target="_blank">LinkedIn</a></li>
+                    <li><a href="#" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Términos de Uso</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 LUMI. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ========== SCRIPTS ====================-->
+    <!-- Utilidades -->
+    <script src="src/js/utils.js"></script>
+
+    <!-- QR Generator -->
+    <script src="src/js/qr-generator.js"></script>
+
+    <!-- Analytics -->
+    <script src="src/js/analytics.js"></script>
+
+    <!-- Main - Inicialización -->
+    <script src="src/js/main.js"></script>
+</body>
+</html>
