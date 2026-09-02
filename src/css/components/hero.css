@@ -50,12 +50,12 @@
 /* ==================== HERO SECTION ====================*/
 
 .hero {
-  min-height: 100vh;
+  min-height: min(820px, 100vh);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--espacio-3xl) var(--espacio-md);
-  background: linear-gradient(135deg, #04010e 0%, #1a0a3e 50%, #04010e 100%);
+  padding: 110px var(--espacio-lg) 90px;
+  background: linear-gradient(135deg, #080010 0%, #16003a 54%, #0b0813 100%);
   position: relative;
   overflow: hidden;
 }
@@ -91,7 +91,7 @@
   grid-template-columns: 1fr 1fr;
   gap: var(--espacio-xl);
   align-items: center;
-  max-width: 1200px;
+  max-width: 1240px;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -109,6 +109,23 @@
   background-clip: text;
   text-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
   animation: fadeInDown 1s ease-out;
+}
+
+.hero-texto {
+  max-width: 620px;
+}
+
+.hero-texto::before {
+  content: 'APRENDIZAJE - ORGANIZACION - CONSTANCIA';
+  display: inline-block;
+  margin-bottom: var(--espacio-lg);
+  padding: 8px 12px;
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  border-radius: 999px;
+  color: var(--color-cyan-neon);
+  font-size: 10px;
+  font-weight: var(--font-bold);
+  letter-spacing: 1.5px;
 }
 
 .hero-subtitulo {
@@ -135,6 +152,30 @@
   animation: fadeInUp 1s ease-out 0.6s both;
 }
 
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-radius: var(--radio-boton);
+  background: linear-gradient(135deg, var(--color-magenta-lumi), var(--color-purpura-neon));
+  color: #fff;
+  font-weight: var(--font-bold);
+  box-shadow: 0 12px 28px rgba(189, 0, 255, 0.25);
+  animation: fadeInUp 1s ease-out 0.8s both;
+}
+
+.hero-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 34px rgba(189, 0, 255, 0.42);
+}
+
+.hero-cta::after {
+  content: '->';
+  color: var(--color-cyan-neon);
+  font-size: 20px;
+}
+
 /* ========== IMAGEN HERO ==========*/
 
 .hero-imagen {
@@ -146,7 +187,7 @@
 }
 
 .imagen-robot {
-  max-width: 100%;
+  max-width: min(100%, 500px);
   height: auto;
   filter: drop-shadow(0 0 40px rgba(0, 240, 255, 0.4));
   animation: roboFloat 3s ease-in-out infinite;

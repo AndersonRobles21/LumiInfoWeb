@@ -2,19 +2,21 @@
 
 :root {
   /* ========== FONDOS ==========*/
-  --fondo-base: #04010e;
-  --fondo-tarjeta: rgba(18, 14, 38, 0.75);
-  --fondo-tarjeta-hover: rgba(28, 22, 58, 0.85);
+  --fondo-base: #080010;
+  --fondo-tarjeta: rgba(27, 22, 59, 0.82);
+  --fondo-tarjeta-hover: rgba(39, 29, 77, 0.95);
 
   /* ========== COLORES NEÓN ==========*/
   --color-cyan-neon: #00f0ff;
   --color-cyan-glow: rgba(0, 240, 255, 0.35);
-  --color-purpura-neon: #d946ef;
+  --color-purpura-neon: #bd00ff;
+  --color-magenta-lumi: #ff44aa;
+  --color-lavanda: #bdb5d6;
 
   /* ========== TEXTO ==========*/
   --color-texto-principal: #ffffff;
-  --color-texto-secundario: #94a3b8;
-  --color-texto-terciario: #64748b;
+  --color-texto-secundario: #b0aec4;
+  --color-texto-terciario: #777398;
 
   /* ========== ALERTAS ==========*/
   --color-rojo-peligro: #ff4d4d;
@@ -22,20 +24,20 @@
   --color-amarillo-aviso: #ffaa00;
 
   /* ========== BORDES ==========*/
-  --borde-cristal: 1px solid rgba(255, 255, 255, 0.08);
+  --borde-cristal: 1px solid rgba(255, 255, 255, 0.1);
   --borde-activo-cyan: 1px solid #00f0ff;
   --borde-activo-purpura: 1px solid #d946ef;
 
   /* ========== SOMBRAS ==========*/
-  --sombra-cyan-glow: 0 0 18px rgba(0, 240, 255, 0.3);
-  --sombra-tarjeta: 0 8px 32px rgba(0, 0, 0, 0.4);
-  --sombra-purpura: 0 0 20px rgba(217, 70, 239, 0.25);
+  --sombra-cyan-glow: 0 0 24px rgba(0, 240, 255, 0.24);
+  --sombra-tarjeta: 0 14px 36px rgba(0, 0, 0, 0.32);
+  --sombra-purpura: 0 0 24px rgba(189, 0, 255, 0.28);
   --sombra-profunda: 0 20px 50px rgba(0, 0, 0, 0.6);
 
   /* ========== RADIOS ==========*/
-  --radio-boton: 12px;
-  --radio-tarjeta: 16px;
-  --radio-grande: 20px;
+  --radio-boton: 14px;
+  --radio-tarjeta: 18px;
+  --radio-grande: 24px;
 
   /* ========== TRANSICIONES ==========*/
   --transicion-rápida: all 0.2s ease;
@@ -58,8 +60,8 @@
   --font-lg: 18px;
   --font-xl: 20px;
   --font-2xl: 28px;
-  --font-3xl: 44px;
-  --font-4xl: 80px;
+  --font-3xl: 48px;
+  --font-4xl: 88px;
 
   /* ========== PESOS DE FUENTE ==========*/
   --font-regular: 400;
