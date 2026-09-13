@@ -1,330 +1,454 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
+  <head>
     <!-- ========== META TAGS ========== -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LUMI te ayuda a organizar tus tareas, estudiar con métodos activos y seguir tu progreso con apoyo de inteligencia artificial.">
-    <meta name="keywords" content="LUMI, estudio, tareas, planes de estudio, inteligencia artificial, aprendizaje">
-    <meta name="theme-color" content="#04010e">
-    <meta name="color-scheme" content="dark">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LUMI te ayuda a organizar tus tareas, estudiar con métodos activos y seguir tu progreso con apoyo de inteligencia artificial."
+    />
+    <meta
+      name="keywords"
+      content="LUMI, estudio, tareas, planes de estudio, inteligencia artificial, aprendizaje"
+    />
+    <meta name="theme-color" content="#04010e" />
+    <meta name="color-scheme" content="dark" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
     <title>LUMI - Organiza tu estudio, avanza a tu ritmo</title>
 
     <!-- ========== ESTILOS CSS ========== -->
     <!-- Reset y bases -->
-    <link rel="stylesheet" href="src/css/global/reset.css">
-    
+    <link rel="stylesheet" href="src/css/global/reset.css" />
+
     <!-- Variables CSS -->
-    <link rel="stylesheet" href="src/css/global/variables.css">
-    
+    <link rel="stylesheet" href="src/css/global/variables.css" />
+
     <!-- Componentes -->
-    <link rel="stylesheet" href="src/css/components/hero.css">
-    <link rel="stylesheet" href="src/css/components/sections.css">
-    <link rel="stylesheet" href="src/css/components/additional.css">
-    
+    <link rel="stylesheet" href="src/css/components/hero.css" />
+    <link rel="stylesheet" href="src/css/components/sections.css" />
+    <link rel="stylesheet" href="src/css/components/additional.css" />
+
     <!-- Responsive -->
-    <link rel="stylesheet" href="src/css/responsive.css">
+    <link rel="stylesheet" href="src/css/responsive.css" />
 
     <!-- ========== LIBRERÍA QR CODE ========== -->
     <!-- Reemplazar con tu CDN preferido si es necesario -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header class="site-header">
-        <a class="brand-mark" href="#hero" aria-label="LUMI, inicio">LUMI<span>.</span></a>
-        <nav class="site-nav" aria-label="Navegación principal">
-            <a href="#caracteristicas">Funcionalidades</a>
-            <a href="#flujo">Cómo funciona</a>
-            <a href="#descarga">Conocer LUMI</a>
-        </nav>
+      <a class="brand-mark" href="#hero" aria-label="LUMI, inicio"
+        >LUMI<span>.</span></a
+      >
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="#caracteristicas">Funcionalidades</a>
+        <a href="#flujo">Cómo funciona</a>
+        <a href="#descarga">Conocer LUMI</a>
+      </nav>
     </header>
     <!-- ========== SPLASH SCREEN ========== -->
     <div id="splash-screen" class="splash-screen">
-        <div class="splash-contenido">
-            <img src="assets/Fondo_splash.png" alt="LUMI" class="splash-image">
-        </div>
+      <div class="splash-contenido">
+        <img src="assets/Fondo_splash.png" alt="LUMI" class="splash-image" />
+      </div>
     </div>
 
     <!-- ========== SECCIÓN HERO ========== -->
     <section class="hero" id="hero">
-        <div class="hero-contenido">
-            <div class="hero-texto">
-                <h1>LUMI</h1>
-                <p class="hero-subtitulo">Tu guía inteligente para estudiar</p>
-                <p class="hero-descripcion">Convierte tus tareas en pasos claros.</p>
-                <p class="hero-parrafo">
-                    LUMI organiza lo que necesitas hacer, propone una forma de estudiarlo y te acompaña
-                    mientras avanzas, para que puedas estudiar con más claridad y constancia.
-                </p>
-                <a class="hero-cta" href="#descarga">Conoce la aplicacion</a>
-            </div>
-            <div class="hero-imagen">
-                <img 
-                    src="assets/img/robot-educacion.png" 
-                    alt="Robot educativo LUMI" 
-                    class="imagen-robot"
-                    onerror="this.style.display='none'"
-                >
-            </div>
+      <div class="hero-contenido">
+        <div class="hero-texto">
+          <h1>LUMI</h1>
+          <p class="hero-subtitulo">Tu guía inteligente para estudiar</p>
+          <p class="hero-descripcion">Convierte tus tareas en pasos claros.</p>
+          <p class="hero-parrafo">
+            LUMI organiza lo que necesitas hacer, propone una forma de
+            estudiarlo y te acompaña mientras avanzas, para que puedas estudiar
+            con más claridad y constancia.
+          </p>
+          <a class="hero-cta" href="#descarga">Conoce la aplicacion</a>
         </div>
+        <div class="hero-imagen">
+          <img
+            src="assets/img/robot-educacion.png"
+            alt="Robot educativo LUMI"
+            class="imagen-robot"
+            onerror="this.style.display = 'none'"
+          />
+        </div>
+      </div>
     </section>
 
     <!-- ========== CARACTERÍSTICAS PRINCIPALES ========== -->
     <section class="caracteristicas" id="caracteristicas">
-        <div class="seccion-titulo">
-            <span class="eyebrow">PARA TU DÍA A DÍA</span>
-            <h2>Estudia con un plan que puedas seguir</h2>
-            <p>Herramientas pensadas para estudiantes con tareas, entregas y objetivos reales.</p>
+      <div class="seccion-titulo">
+        <span class="eyebrow">PARA TU DÍA A DÍA</span>
+        <h2>Estudia con un plan que puedas seguir</h2>
+        <p>
+          Herramientas pensadas para estudiantes con tareas, entregas y
+          objetivos reales.
+        </p>
+      </div>
+
+      <div class="caracteristicas-grid">
+        <!-- Card 1: Métodos de Estudio -->
+        <div class="caracteristica-card">
+          <img
+            src="assets/metodos.png"
+            alt="Métodos de estudio"
+            class="card-imagen"
+            onerror="this.style.display = 'none'"
+          />
+          <h3>Métodos para aprender activamente</h3>
+          <p>Elige la estrategia que mejor encaje con tu tarea:</p>
+          <ul class="metodos-lista">
+            <li>
+              <strong>Feynman:</strong> explica un concepto con tus palabras
+            </li>
+            <li><strong>Pomodoro:</strong> alterna enfoque y descansos</li>
+            <li>
+              <strong>Active Recall:</strong> responde sin mirar tus apuntes
+            </li>
+            <li><strong>Spaced Repetition:</strong> repasa conceptos clave</li>
+          </ul>
         </div>
 
-        <div class="caracteristicas-grid">
-            <!-- Card 1: Métodos de Estudio -->
-            <div class="caracteristica-card">
-                <img src="assets/metodos.png" alt="Métodos de estudio" class="card-imagen" onerror="this.style.display='none'">
-                <h3>Métodos para aprender activamente</h3>
-                <p>Elige la estrategia que mejor encaje con tu tarea:</p>
-                <ul class="metodos-lista">
-                    <li><strong>Feynman:</strong> explica un concepto con tus palabras</li>
-                    <li><strong>Pomodoro:</strong> alterna enfoque y descansos</li>
-                    <li><strong>Active Recall:</strong> responde sin mirar tus apuntes</li>
-                    <li><strong>Spaced Repetition:</strong> repasa conceptos clave</li>
-                </ul>
-            </div>
-
-            <!-- Card 2: Asistente IA -->
-            <div class="caracteristica-card">
-                <img src="assets/chat_ia.png" alt="Chat con IA" class="card-imagen" onerror="this.style.display='none'">
-                <h3>Planes creados con IA</h3>
-                <p>LUMI convierte tu objetivo en una guía concreta:</p>
-                <ul class="metodos-lista">
-                    <li>Considera tu tarea, fecha de entrega y dificultad</li>
-                    <li>Tiene en cuenta tu tiempo disponible y objetivo</li>
-                    <li>Selecciona o aplica un método de estudio</li>
-                    <li>Incluye consejos, conceptos y recursos de apoyo</li>
-                </ul>
-            </div>
-
-            <!-- Card 3: Gamificación -->
-            <div class="caracteristica-card">
-                <img src="assets/racha.png" alt="Gamificación" class="card-imagen" onerror="this.style.display='none'">
-                <h3>Progreso que te motiva</h3>
-                <p>Visualiza tu constancia mientras estudias:</p>
-                <ul class="metodos-lista">
-                    <li>Puntos y XP por tu avance</li>
-                    <li>Niveles y logros por objetivos alcanzados</li>
-                    <li>Rachas de estudio consecutivas</li>
-                    <li>Indicadores para reconocer tu constancia</li>
-                </ul>
-            </div>
-
-            <!-- Card 4: Organización -->
-            <div class="caracteristica-card">
-                <img src="assets/tarea.png" alt="Tareas" class="card-imagen" onerror="this.style.display='none'">
-                <h3>Tareas y entregas bajo control</h3>
-                <p>Ten claro qué sigue y cuándo hacerlo:</p>
-                <ul class="metodos-lista">
-                    <li>Crea tareas con fecha límite y dificultad</li>
-                    <li>Divide cada plan en fases y subpasos</li>
-                    <li>Consulta tus actividades en un calendario</li>
-                    <li>Marca cada avance hasta completar tu guía</li>
-                </ul>
-            </div>
-
-            <!-- Card 5: Análisis -->
-            <div class="caracteristica-card">
-                <img src="assets/historial_lumi.png" alt="Historial y progreso" class="card-imagen" onerror="this.style.display='none'">
-                <h3>Seguimiento de tu avance</h3>
-                <p>Observa cómo estás construyendo tu hábito:</p>
-                <ul class="metodos-lista">
-                    <li>Horas de estudio registradas</li>
-                    <li>Tareas completadas y pendientes</li>
-                    <li>Racha actual y actividad semanal</li>
-                    <li>Historial de planes creados con IA</li>
-                </ul>
-            </div>
-
-            <!-- Card 6: Panel Admin -->
-            <div class="caracteristica-card">
-                <img src="assets/lumi_gamificacion.png" alt="Racha" class="card-imagen" onerror="this.style.display='none'">
-                <h3>Una experiencia hecha para estudiantes</h3>
-                <p>Concéntrate en aprender y avanzar:</p>
-                <ul class="metodos-lista">
-                    <li>Define tus objetivos de estudio</li>
-                    <li>Indica tus horarios disponibles</li>
-                    <li>Recibe una guía adaptada a tu contexto</li>
-                    <li>Retoma tus planes cuando lo necesites</li>
-                </ul>
-            </div>
+        <!-- Card 2: Asistente IA -->
+        <div class="caracteristica-card">
+          <img
+            src="assets/chat_ia.png"
+            alt="Chat con IA"
+            class="card-imagen"
+            onerror="this.style.display = 'none'"
+          />
+          <h3>Planes creados con IA</h3>
+          <p>LUMI convierte tu objetivo en una guía concreta:</p>
+          <ul class="metodos-lista">
+            <li>Considera tu tarea, fecha de entrega y dificultad</li>
+            <li>Tiene en cuenta tu tiempo disponible y objetivo</li>
+            <li>Selecciona o aplica un método de estudio</li>
+            <li>Incluye consejos, conceptos y recursos de apoyo</li>
+          </ul>
         </div>
+
+        <!-- Card 3: Gamificación -->
+        <div class="caracteristica-card">
+          <img
+            src="assets/racha.png"
+            alt="Gamificación"
+            class="card-imagen"
+            onerror="this.style.display = 'none'"
+          />
+          <h3>Progreso que te motiva</h3>
+          <p>Visualiza tu constancia mientras estudias:</p>
+          <ul class="metodos-lista">
+            <li>Puntos y XP por tu avance</li>
+            <li>Niveles y logros por objetivos alcanzados</li>
+            <li>Rachas de estudio consecutivas</li>
+            <li>Indicadores para reconocer tu constancia</li>
+          </ul>
+        </div>
+
+        <!-- Card 4: Organización -->
+        <div class="caracteristica-card">
+          <img
+            src="assets/tarea.png"
+            alt="Tareas"
+            class="card-imagen"
+            onerror="this.style.display = 'none'"
+          />
+          <h3>Tareas y entregas bajo control</h3>
+          <p>Ten claro qué sigue y cuándo hacerlo:</p>
+          <ul class="metodos-lista">
+            <li>Crea tareas con fecha límite y dificultad</li>
+            <li>Divide cada plan en fases y subpasos</li>
+            <li>Consulta tus actividades en un calendario</li>
+            <li>Marca cada avance hasta completar tu guía</li>
+          </ul>
+        </div>
+
+        <!-- Card 5: Análisis -->
+        <div class="caracteristica-card">
+          <img
+            src="assets/historial_lumi.png"
+            alt="Historial y progreso"
+            class="card-imagen"
+            onerror="this.style.display = 'none'"
+          />
+          <h3>Seguimiento de tu avance</h3>
+          <p>Observa cómo estás construyendo tu hábito:</p>
+          <ul class="metodos-lista">
+            <li>Horas de estudio registradas</li>
+            <li>Tareas completadas y pendientes</li>
+            <li>Racha actual y actividad semanal</li>
+            <li>Historial de planes creados con IA</li>
+          </ul>
+        </div>
+
+        <!-- Card 6: Panel Admin -->
+        <div class="caracteristica-card">
+          <img
+            src="assets/lumi_gamificacion.png"
+            alt="Racha"
+            class="card-imagen"
+            onerror="this.style.display = 'none'"
+          />
+          <h3>Una experiencia hecha para estudiantes</h3>
+          <p>Concéntrate en aprender y avanzar:</p>
+          <ul class="metodos-lista">
+            <li>Define tus objetivos de estudio</li>
+            <li>Indica tus horarios disponibles</li>
+            <li>Recibe una guía adaptada a tu contexto</li>
+            <li>Retoma tus planes cuando lo necesites</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- ========== FLUJO DE FUNCIONAMIENTO ========== -->
     <section class="como-funciona" id="flujo">
-        <div class="seccion-titulo">
-            <span class="eyebrow">ASÍ FUNCIONA</span>
-            <h2>De una tarea pendiente a un siguiente paso claro</h2>
-            <p>LUMI te acompaña desde la planificación hasta la revisión de tu avance.</p>
+      <div class="seccion-titulo">
+        <span class="eyebrow">ASÍ FUNCIONA</span>
+        <h2>De una tarea pendiente a un siguiente paso claro</h2>
+        <p>
+          LUMI te acompaña desde la planificación hasta la revisión de tu
+          avance.
+        </p>
+      </div>
+
+      <div class="pasos-flujo">
+        <div class="paso">
+          <div class="paso-numero">01</div>
+          <h3>Regístrate</h3>
+          <p>
+            Crea tu cuenta con tu email y contraseña. Tu perfil almacena tu
+            progreso y preferencias.
+          </p>
         </div>
 
-        <div class="pasos-flujo">
-            <div class="paso">
-                <div class="paso-numero">01</div>
-                <h3>Regístrate</h3>
-                <p>Crea tu cuenta con tu email y contraseña. Tu perfil almacena tu progreso y preferencias.</p>
-            </div>
-
-            <div class="paso">
-                <div class="paso-numero">02</div>
-                <h3>Cuéntale tu objetivo</h3>
-                <p>Indica qué necesitas estudiar, cuándo debes entregarlo y qué dificultad percibes.</p>
-            </div>
-
-            <div class="paso">
-                <div class="paso-numero">03</div>
-                <h3>Recibe tu guía</h3>
-                <p>LUMI organiza tu trabajo en fases, subpasos, tiempos estimados, consejos y recursos.</p>
-            </div>
-
-            <div class="paso">
-                <div class="paso-numero">04</div>
-                <h3>Usa un método</h3>
-                <p>La IA puede recomendarte Feynman, Pomodoro, Active Recall o Spaced Repetition.</p>
-            </div>
-
-            <div class="paso">
-                <div class="paso-numero">05</div>
-                <h3>Completa paso a paso</h3>
-                <p>Marca subpasos y fases a medida que trabajas; si lo necesitas, pide una explicación más sencilla.</p>
-            </div>
-
-            <div class="paso">
-                <div class="paso-numero">06</div>
-                <h3>Refuerza lo aprendido</h3>
-                <p>Explica conceptos con Feynman, responde preguntas de Active Recall y repasa conceptos clave.</p>
-            </div>
-
-            <div class="paso">
-                <div class="paso-numero">07</div>
-                <h3>Revisa tu progreso</h3>
-                <p>Consulta tus horas de estudio, tareas completadas, pendientes, racha y actividad semanal.</p>
-            </div>
-
-            <div class="paso">
-                <div class="paso-numero">08</div>
-                <h3>Mantén tu ritmo</h3>
-                <p>Gana puntos y XP, alcanza niveles y desbloquea logros mientras construyes constancia.</p>
-            </div>
+        <div class="paso">
+          <div class="paso-numero">02</div>
+          <h3>Cuéntale tu objetivo</h3>
+          <p>
+            Indica qué necesitas estudiar, cuándo debes entregarlo y qué
+            dificultad percibes.
+          </p>
         </div>
+
+        <div class="paso">
+          <div class="paso-numero">03</div>
+          <h3>Recibe tu guía</h3>
+          <p>
+            LUMI organiza tu trabajo en fases, subpasos, tiempos estimados,
+            consejos y recursos.
+          </p>
+        </div>
+
+        <div class="paso">
+          <div class="paso-numero">04</div>
+          <h3>Usa un método</h3>
+          <p>
+            La IA puede recomendarte Feynman, Pomodoro, Active Recall o Spaced
+            Repetition.
+          </p>
+        </div>
+
+        <div class="paso">
+          <div class="paso-numero">05</div>
+          <h3>Completa paso a paso</h3>
+          <p>
+            Marca subpasos y fases a medida que trabajas; si lo necesitas, pide
+            una explicación más sencilla.
+          </p>
+        </div>
+
+        <div class="paso">
+          <div class="paso-numero">06</div>
+          <h3>Refuerza lo aprendido</h3>
+          <p>
+            Explica conceptos con Feynman, responde preguntas de Active Recall y
+            repasa conceptos clave.
+          </p>
+        </div>
+
+        <div class="paso">
+          <div class="paso-numero">07</div>
+          <h3>Revisa tu progreso</h3>
+          <p>
+            Consulta tus horas de estudio, tareas completadas, pendientes, racha
+            y actividad semanal.
+          </p>
+        </div>
+
+        <div class="paso">
+          <div class="paso-numero">08</div>
+          <h3>Mantén tu ritmo</h3>
+          <p>
+            Gana puntos y XP, alcanza niveles y desbloquea logros mientras
+            construyes constancia.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- ========== TODAS LAS SECCIONES ========== -->
     <section class="secciones-app" id="secciones">
-        <div class="seccion-titulo">
-            <span class="eyebrow">TODO EN UN SOLO LUGAR</span>
-            <h2>Herramientas para avanzar sin perderte</h2>
-            <p>Una vista clara de tus planes, tareas, métodos y progreso.</p>
+      <div class="seccion-titulo">
+        <span class="eyebrow">TODO EN UN SOLO LUGAR</span>
+        <h2>Herramientas para avanzar sin perderte</h2>
+        <p>Una vista clara de tus planes, tareas, métodos y progreso.</p>
+      </div>
+
+      <div class="secciones-grid">
+        <div class="seccion-item">
+          <h3>Inicio</h3>
+          <p>
+            Consulta tus planes activos, el avance de cada guía y tu racha
+            actual.
+          </p>
         </div>
 
-        <div class="secciones-grid">
-            <div class="seccion-item">
-                <h3>Inicio</h3>
-                <p>Consulta tus planes activos, el avance de cada guía y tu racha actual.</p>
-            </div>
-
-            <div class="seccion-item">
-                <h3>Nueva tarea</h3>
-                <p>Registra un trabajo, añade su descripción, fecha límite, dificultad y enfoque.</p>
-            </div>
-
-            <div class="seccion-item">
-                <h3>Calendario</h3>
-                <p>Visualiza tu calendario de estudios. Ve actividades organizadas por fecha.</p>
-            </div>
-
-            <div class="seccion-item">
-                <h3>Guía de estudio</h3>
-                <p>Encuentra fases, subpasos, conceptos clave, preguntas, consejos y enlaces útiles.</p>
-            </div>
-
-            <div class="seccion-item">
-                <h3>Historial IA</h3>
-                <p>Busca y vuelve a abrir los planes que LUMI ha generado para tus tareas.</p>
-            </div>
-
-            <div class="seccion-item">
-                <h3>Ayuda durante el estudio</h3>
-                <p>Solicita explicaciones paso a paso o una versión más sencilla cuando una fase lo requiera.</p>
-            </div>
-
-            <div class="seccion-item">
-                <h3>Progreso y logros</h3>
-                <p>Consulta tus puntos, XP, nivel, logros alcanzados y racha de estudio.</p>
-            </div>
-
-            <div class="seccion-item">
-                <h3>Métodos interactivos</h3>
-                <p>Practica con temporizador Pomodoro, explicación Feynman, preguntas de recuerdo y repaso de conceptos.</p>
-            </div>
+        <div class="seccion-item">
+          <h3>Nueva tarea</h3>
+          <p>
+            Registra un trabajo, añade su descripción, fecha límite, dificultad
+            y enfoque.
+          </p>
         </div>
+
+        <div class="seccion-item">
+          <h3>Calendario</h3>
+          <p>
+            Visualiza tu calendario de estudios. Ve actividades organizadas por
+            fecha.
+          </p>
+        </div>
+
+        <div class="seccion-item">
+          <h3>Guía de estudio</h3>
+          <p>
+            Encuentra fases, subpasos, conceptos clave, preguntas, consejos y
+            enlaces útiles.
+          </p>
+        </div>
+
+        <div class="seccion-item">
+          <h3>Historial IA</h3>
+          <p>
+            Busca y vuelve a abrir los planes que LUMI ha generado para tus
+            tareas.
+          </p>
+        </div>
+
+        <div class="seccion-item">
+          <h3>Ayuda durante el estudio</h3>
+          <p>
+            Solicita explicaciones paso a paso o una versión más sencilla cuando
+            una fase lo requiera.
+          </p>
+        </div>
+
+        <div class="seccion-item">
+          <h3>Progreso y logros</h3>
+          <p>
+            Consulta tus puntos, XP, nivel, logros alcanzados y racha de
+            estudio.
+          </p>
+        </div>
+
+        <div class="seccion-item">
+          <h3>Métodos interactivos</h3>
+          <p>
+            Practica con temporizador Pomodoro, explicación Feynman, preguntas
+            de recuerdo y repaso de conceptos.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- ========== DESCARGA ========== -->
     <section class="descarga" id="descarga">
-        <div class="seccion-titulo">
-            <span class="eyebrow">EMPIEZA A ORGANIZARTE</span>
-            <h2>Da claridad a tu próxima tarea</h2>
+      <div class="seccion-titulo">
+        <span class="eyebrow">EMPIEZA A ORGANIZARTE</span>
+        <h2>Da claridad a tu próxima tarea</h2>
+      </div>
+
+      <div class="descarga-wrapper">
+        <!-- Imagen izquierda -->
+        <div class="descarga-imagen izquierda">
+          <img
+            src="assets/Lumi_inicio.png"
+            alt="Pantalla de inicio LUMI"
+            class="app-screenshot"
+            onerror="this.style.display = 'none'"
+          />
         </div>
 
-        <div class="descarga-wrapper">
-            <!-- Imagen izquierda -->
-            <div class="descarga-imagen izquierda">
-                <img src="assets/Lumi_inicio.png" alt="Pantalla de inicio LUMI" class="app-screenshot" onerror="this.style.display='none'">
-            </div>
+        <!-- Centro con QR -->
 
-            <!-- Centro con QR -->
-            <div class="descarga-qr-section">
-                <div id="qr-container" class="qr-container-vacio">
-                    <!-- QR will be generated here -->
-                </div>
-                <h3>Escanea para conocer LUMI</h3>
-                <p class="motivational-text">Empieza con un objetivo y conviértelo en pasos que puedas completar.</p>
-            </div>
+        <div class="descarga-qr-section">
+          <div class="qr-card">
+            <div class="qr-glow"></div>
 
-            <!-- Imagen derecha -->
-            <div class="descarga-imagen derecha">
-                <img src="assets/Lumi_progreso.png" alt="Progreso LUMI" class="app-screenshot" onerror="this.style.display='none'">
+            <img
+              src="assets/diseño gráfico.png"
+              alt="Código QR para conocer Lumi"
+              class="qr-lumi"
+            />
+
+            <div class="qr-content">
+              <span class="qr-label">LUMI IA</span>
+              <h3>Conoce a Lumi</h3>
+              <p>
+                Escanea el código y descubre una nueva forma de organizar tus
+                estudios.
+              </p>
             </div>
+          </div>
         </div>
+        ```
+
+        <!-- Imagen derecha -->
+        <div class="descarga-imagen derecha">
+          <img
+            src="assets/Lumi_progreso.png"
+            alt="Progreso LUMI"
+            class="app-screenshot"
+            onerror="this.style.display = 'none'"
+          />
+        </div>
+      </div>
     </section>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer" id="footer">
-        <div class="footer-contenido">
-            <div class="footer-section">
-                <h4>LUMI</h4>
-                <p>Una guía inteligente para estudiar con claridad y constancia.</p>
-            </div>
-
-            <div class="footer-section">
-                <h4>Enlaces Rápidos</h4>
-                <ul>
-                    <li><a href="#caracteristicas">Características</a></li>
-                    <li><a href="#flujo">Cómo Funciona</a></li>
-                    <li><a href="#secciones">Secciones</a></li>
-                    <li><a href="#descarga">Descargar</a></li>
-                </ul>
-            </div>
-        
+      <div class="footer-contenido">
+        <div class="footer-section">
+          <h4>LUMI</h4>
+          <p>Una guía inteligente para estudiar con claridad y constancia.</p>
         </div>
 
-        <div class="footer-bottom">
-            <p>&copy; 2026 LUMI.</p>
+        <div class="footer-section">
+          <h4>Enlaces Rápidos</h4>
+          <ul>
+            <li><a href="#caracteristicas">Características</a></li>
+            <li><a href="#flujo">Cómo Funciona</a></li>
+            <li><a href="#secciones">Secciones</a></li>
+            <li><a href="#descarga">Descargar</a></li>
+          </ul>
         </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 LUMI.</p>
+      </div>
     </footer>
 
     <!-- ========== SCRIPTS ====================-->
@@ -339,5 +463,5 @@
 
     <!-- Main - Inicialización -->
     <script src="src/js/main.js"></script>
-</body>
+  </body>
 </html>
