@@ -39,9 +39,6 @@
     <!-- Responsive -->
     <link rel="stylesheet" href="src/css/responsive.css" />
 
-    <!-- ========== LIBRERÍA QR CODE ========== -->
-    <!-- Reemplazar con tu CDN preferido si es necesario -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -226,73 +223,59 @@
       <div class="pasos-flujo">
         <div class="paso">
           <div class="paso-numero">01</div>
-          <h3>Regístrate</h3>
+          <h3>Conoce tu situación</h3>
           <p>
-            Crea tu cuenta con tu email y contraseña. Tu perfil almacena tu
-            progreso y preferencias.
+            LUMI permite conocer tus hábitos y necesidades de estudio para
+            tener una referencia de cómo estás organizando tu tiempo y
+            enfrentando tus actividades.
           </p>
         </div>
 
         <div class="paso">
           <div class="paso-numero">02</div>
-          <h3>Cuéntale tu objetivo</h3>
+          <h3>Organiza tus tareas</h3>
           <p>
-            Indica qué necesitas estudiar, cuándo debes entregarlo y qué
-            dificultad percibes.
+            Registra tus actividades, fechas y horarios para tener una visión
+            clara de lo que debes realizar y evitar dejar todo para última
+            hora.
           </p>
         </div>
 
         <div class="paso">
           <div class="paso-numero">03</div>
-          <h3>Recibe tu guía</h3>
+          <h3>Recibe apoyo de IA</h3>
           <p>
-            LUMI organiza tu trabajo en fases, subpasos, tiempos estimados,
-            consejos y recursos.
+            LUMI utiliza inteligencia artificial para generar planes de
+            estudio adaptados a las necesidades del aprendiz.
           </p>
         </div>
 
         <div class="paso">
           <div class="paso-numero">04</div>
-          <h3>Usa un método</h3>
+          <h3>Aplica técnicas de estudio</h3>
           <p>
-            La IA puede recomendarte Feynman, Pomodoro, Active Recall o Spaced
-            Repetition.
+            LUMI incorpora técnicas como Pomodoro, Active Recall, Spaced
+            Repetition, Feynman y Testing para ayudarte a estudiar de
+            diferentes maneras.
           </p>
         </div>
 
         <div class="paso">
           <div class="paso-numero">05</div>
-          <h3>Completa paso a paso</h3>
+          <h3>Mantén tu progreso</h3>
           <p>
-            Marca subpasos y fases a medida que trabajas; si lo necesitas, pide
-            una explicación más sencilla.
+            Obtén XP, sube de nivel, consigue logros y mantén tus rachas
+            mientras avanzas en tus actividades.
           </p>
         </div>
 
         <div class="paso">
           <div class="paso-numero">06</div>
-          <h3>Refuerza lo aprendido</h3>
+          <h3>Mejora tus hábitos</h3>
           <p>
-            Explica conceptos con Feynman, responde preguntas de Active Recall y
-            repasa conceptos clave.
-          </p>
-        </div>
-
-        <div class="paso">
-          <div class="paso-numero">07</div>
-          <h3>Revisa tu progreso</h3>
-          <p>
-            Consulta tus horas de estudio, tareas completadas, pendientes, racha
-            y actividad semanal.
-          </p>
-        </div>
-
-        <div class="paso">
-          <div class="paso-numero">08</div>
-          <h3>Mantén tu ritmo</h3>
-          <p>
-            Gana puntos y XP, alcanza niveles y desbloquea logros mientras
-            construyes constancia.
+            LUMI busca ayudarte a desarrollar una forma de estudio más
+            organizada y constante, convirtiendo tus objetivos en acciones
+            concretas.
           </p>
         </div>
       </div>
@@ -373,26 +356,109 @@
       </div>
     </section>
 
+    <!-- ========== CUESTIONARIO DE PROCRASTINACIÓN ========== -->
+    <section class="cuestionario-seccion" id="procrastinacion">
+      <div class="seccion-titulo">
+        <span class="eyebrow">CONOCE TUS HÁBITOS</span>
+        <h2>Una pausa para conocerte mejor</h2>
+        <p>Observa tus hábitos de estudio y encuentra un siguiente paso claro.</p>
+      </div>
+
+      <div class="invitacion-cuestionario" id="invitacion-cuestionario">
+        <span class="invitacion-icono">01—05</span>
+        <h3>¿Te gustaría saber tu nivel de procrastinación?</h3>
+        <p>Responde 5 preguntas rápidas y descubre un nivel aproximado del 1 al 10.</p>
+        <button class="boton-cuestionario" id="iniciar-cuestionario" type="button">DESCUBRIR MI NIVEL</button>
+      </div>
+
+      <form class="cuestionario" id="cuestionario-procrastinacion" hidden>
+        <div class="progreso-cuestionario">
+          <span id="progreso-texto">Pregunta 1 de 5</span>
+          <div class="progreso-pista"><span id="progreso-cuestionario"></span></div>
+        </div>
+
+        <fieldset class="pregunta" data-question="0">
+          <legend>1. ¿Dejas tus tareas para el último momento?</legend>
+          <div class="opciones-respuesta">
+            <label><input type="radio" name="pregunta-1" value="1" />Nunca</label>
+            <label><input type="radio" name="pregunta-1" value="2" />Casi nunca</label>
+            <label><input type="radio" name="pregunta-1" value="3" />A veces</label>
+            <label><input type="radio" name="pregunta-1" value="4" />Casi siempre</label>
+            <label><input type="radio" name="pregunta-1" value="5" />Siempre</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="pregunta" data-question="1" hidden>
+          <legend>2. ¿Te distraes fácilmente cuando estás estudiando?</legend>
+          <div class="opciones-respuesta">
+            <label><input type="radio" name="pregunta-2" value="1" />Nunca</label>
+            <label><input type="radio" name="pregunta-2" value="2" />Casi nunca</label>
+            <label><input type="radio" name="pregunta-2" value="3" />A veces</label>
+            <label><input type="radio" name="pregunta-2" value="4" />Casi siempre</label>
+            <label><input type="radio" name="pregunta-2" value="5" />Siempre</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="pregunta" data-question="2" hidden>
+          <legend>3. ¿Te cuesta empezar una tarea aunque tengas tiempo?</legend>
+          <div class="opciones-respuesta">
+            <label><input type="radio" name="pregunta-3" value="1" />Nunca</label>
+            <label><input type="radio" name="pregunta-3" value="2" />Casi nunca</label>
+            <label><input type="radio" name="pregunta-3" value="3" />A veces</label>
+            <label><input type="radio" name="pregunta-3" value="4" />Casi siempre</label>
+            <label><input type="radio" name="pregunta-3" value="5" />Siempre</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="pregunta" data-question="3" hidden>
+          <legend>4. ¿Sueles retrasar actividades que consideras difíciles o aburridas?</legend>
+          <div class="opciones-respuesta">
+            <label><input type="radio" name="pregunta-4" value="1" />Nunca</label>
+            <label><input type="radio" name="pregunta-4" value="2" />Casi nunca</label>
+            <label><input type="radio" name="pregunta-4" value="3" />A veces</label>
+            <label><input type="radio" name="pregunta-4" value="4" />Casi siempre</label>
+            <label><input type="radio" name="pregunta-4" value="5" />Siempre</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="pregunta" data-question="4" hidden>
+          <legend>5. ¿Has dejado de cumplir una tarea por haberla pospuesto demasiado?</legend>
+          <div class="opciones-respuesta">
+            <label><input type="radio" name="pregunta-5" value="1" />Nunca</label>
+            <label><input type="radio" name="pregunta-5" value="2" />Casi nunca</label>
+            <label><input type="radio" name="pregunta-5" value="3" />A veces</label>
+            <label><input type="radio" name="pregunta-5" value="4" />Casi siempre</label>
+            <label><input type="radio" name="pregunta-5" value="5" />Siempre</label>
+          </div>
+        </fieldset>
+
+        <p class="mensaje-cuestionario" id="mensaje-cuestionario" role="alert"></p>
+        <div class="acciones-cuestionario">
+          <button class="boton-cuestionario" id="siguiente-pregunta" type="button">SIGUIENTE</button>
+          <button class="boton-cuestionario" id="calcular-cuestionario" type="submit" hidden>CALCULAR MI NIVEL</button>
+        </div>
+      </form>
+
+      <div class="resultado-cuestionario" id="resultado-cuestionario" aria-live="polite" hidden>
+        <p class="resultado-nivel">Tu nivel aproximado de procrastinación es <strong id="nivel-procrastinacion">0</strong>/10</p>
+        <div class="barra-nivel" role="progressbar" aria-label="Nivel de procrastinación" aria-valuemin="1" aria-valuemax="10" aria-valuenow="0">
+          <span id="progreso-nivel"></span>
+        </div>
+        <p class="interpretacion-nivel" id="interpretacion-nivel"></p>
+        <p class="aclaracion-nivel">Este resultado es únicamente orientativo y no constituye una evaluación psicológica ni un diagnóstico.</p>
+        <button class="boton-cuestionario boton-secundario" id="reiniciar-cuestionario" type="button">VOLVER A INTENTAR</button>
+      </div>
+    </section>
+
     <!-- ========== DESCARGA ========== -->
     <section class="descarga" id="descarga">
       <div class="seccion-titulo">
         <span class="eyebrow">EMPIEZA A ORGANIZARTE</span>
-        <h2>Da claridad a tu próxima tarea</h2>
+        <h2>DESCARGA LUMI</h2>
+        <p>Lleva LUMI contigo y empieza a organizar mejor tu estudio.</p>
       </div>
 
       <div class="descarga-wrapper">
-        <!-- Imagen izquierda -->
-        <div class="descarga-imagen izquierda">
-          <img
-            src="assets/Lumi_inicio.png"
-            alt="Pantalla de inicio LUMI"
-            class="app-screenshot"
-            onerror="this.style.display = 'none'"
-          />
-        </div>
-
-        <!-- Centro con QR -->
-
         <div class="descarga-qr-section">
           <div class="qr-card">
             <div class="qr-glow"></div>
@@ -407,21 +473,14 @@
               <span class="qr-label">LUMI</span>
               <h3>Conoce a Lumi</h3>
               <p>
-                Escanea el código y descubre una nueva forma de organizar tus
-                estudios.
+                Escanea el código para descargar la aplicación.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- Imagen derecha -->
-        <div class="descarga-imagen derecha">
-          <img
-            src="assets/Lumi_progreso.png"
-            alt="Progreso LUMI"
-            class="app-screenshot"
-            onerror="this.style.display = 'none'"
-          />
+        <div class="descarga-boton">
+          <a class="boton-descarga" href="https://www.mediafire.com/file/dhpzb7tq1xg41pf/LUMI.apk/file" target="_blank" rel="noopener">DESCARGAR LUMI</a>
         </div>
       </div>
     </section>

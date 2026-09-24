@@ -11,10 +11,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--espacio-2xl);
+  gap: clamp(28px, 6vw, 90px);
   flex-wrap: wrap;
   margin-top: var(--espacio-2xl);
-  max-width: 1200px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -53,6 +53,17 @@
   gap: var(--espacio-lg);
   flex: 0 1 auto;
   animation: fadeInUp 0.8s ease-out;
+}
+
+.descarga-boton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton-descarga {
+  min-width: 240px;
+  min-height: 58px;
 }
 
 .qr-container-vacio {
@@ -217,6 +228,11 @@
     gap: var(--espacio-lg);
   }
 
+  .descarga-qr-section,
+  .descarga-imagen {
+    display: none;
+  }
+
   .descarga-imagen {
     flex: 0 1 200px;
     width: 100%;
@@ -229,22 +245,6 @@
   .app-screenshot {
     max-width: 200px;
     margin: 0 auto;
-  }
-
-  .descarga-qr-section h3 {
-    font-size: var(--font-xl);
-  }
-
-  .motivational-text {
-    font-size: var(--font-base);
-  }
-
-  .qr-container {
-    padding: var(--espacio-md);
-  }
-
-  .qr-container canvas {
-    max-width: 200px;
   }
 
   .footer-contenido {
@@ -287,22 +287,6 @@
 
   .app-screenshot {
     max-width: 150px;
-  }
-
-  .qr-container {
-    padding: var(--espacio-md);
-  }
-
-  .qr-container canvas {
-    max-width: 180px;
-  }
-
-  .descarga-qr-section h3 {
-    font-size: var(--font-lg);
-  }
-
-  .motivational-text {
-    font-size: var(--font-sm);
   }
 
   .footer {

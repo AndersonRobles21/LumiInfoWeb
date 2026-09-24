@@ -22,7 +22,7 @@
   }
 
   .caracteristicas-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .pasos-flujo { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pasos-flujo { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .secciones-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
@@ -91,6 +91,14 @@
   .secciones-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+
+  .opciones-respuesta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .invitacion-cuestionario h3 {
+    font-size: 22px;
   }
 
   .caracteristica-card,
@@ -235,6 +243,26 @@
   .pasos-flujo,
   .secciones-grid {
     gap: 12px;
+  }
+
+  .pregunta {
+    padding: 16px;
+  }
+
+  .opciones-respuesta label {
+    font-size: 12px;
+  }
+
+  .resultado-cuestionario {
+    padding: 20px 16px;
+  }
+
+  .acciones-cuestionario {
+    flex-direction: column;
+  }
+
+  .acciones-cuestionario .boton-cuestionario {
+    width: 100%;
   }
 
   /* VARIABLES REDUCIDAS */

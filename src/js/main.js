@@ -6,9 +6,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   console.log('🚀 Inicializando aplicación...');
 
-  // Inicializar QR Generator (desactivado - solo marco vacío)
-  // initializeQRGenerator();
-
   // Configurar navegación suave
   setupSmoothScroll();
 
@@ -20,6 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Configurar eventos de analytics
   setupAnalyticsTracking();
+
+  // Configurar cuestionario de procrastinación
+  setupCuestionario();
 
   console.log('✅ Aplicación iniciada correctamente');
 });
@@ -34,7 +34,7 @@ function initializeQRGenerator() {
       if (typeof QRCode !== 'undefined') {
         clearInterval(checkQRCode);
 
-        const qrGenerator = new QRGenerator('qr-container', 'https://play.google.com/store/apps/details?id=com.lumiapp');
+        const qrGenerator = new QRGenerator('qr-container', 'https://www.mediafire.com/file/dhpzb7tq1xg41pf/LUMI.apk/file');
         qrGenerator.init();
 
         console.log('✅ QR Generator inicializado');
@@ -46,6 +46,176 @@ function initializeQRGenerator() {
   } catch (error) {
     console.error('Error inicializando QR:', error);
   }
+}
+
+/**
+ * Configura el cuestionario de procrastinación
+ */
+function setupCuestionario() {
+  const formulario = document.getElementById('cuestionario-procrastinacion');
+  const inicio = document.getElementById('iniciar-cuestionario');
+  const siguiente = document.getElementById('siguiente-pregunta');
+  const reinicio = document.getElementById('reiniciar-cuestionario');
+
+  if (!formulario || !inicio || !siguiente || !reinicio) return;
+
+  inicio.addEventListener('click', iniciarCuestionario);
+  siguiente.addEventListener('click', siguientePregunta);
+  formulario.querySelectorAll('input[type="radio"]').forEach(respuesta => {
+    respuesta.addEventListener('change', responderPregunta);
+  });
+
+  formulario.addEventListener('submit', function(event) {
+    event.preventDefault();
+    calcularNivel();
+  });
+
+  reinicio.addEventListener('click', reiniciarCuestionario);
+}
+
+/**
+ * Abre el cuestionario y muestra la primera pregunta
+ */
+function iniciarCuestionario() {
+  const formulario = document.getElementById('cuestionario-procrastinacion');
+  const invitacion = document.getElementById('invitacion-cuestionario');
+
+  invitacion.hidden = true;
+  formulario.hidden = false;
+  formulario.reset();
+  formulario.dataset.preguntaActual = '0';
+  mostrarPregunta(0);
+}
+
+/**
+ * Guarda la selección y actualiza el avance del cuestionario
+ */
+function responderPregunta() {
+  const formulario = document.getElementById('cuestionario-procrastinacion');
+  const preguntaActual = Number(formulario.dataset.preguntaActual || 0);
+  mostrarMensajeCuestionario('');
+  actualizarControles(preguntaActual);
+}
+
+/**
+ * Avanza a la siguiente pregunta después de validar la respuesta actual
+ */
+function siguientePregunta() {
+  const formulario = document.getElementById('cuestionario-procrastinacion');
+  const preguntaActual = Number(formulario.dataset.preguntaActual || 0);
+  const respuesta = formulario.querySelector(`input[name="pregunta-${preguntaActual + 1}"]:checked`);
+
+  if (!respuesta) {
+    mostrarMensajeCuestionario('Responde las 5 preguntas para conocer tu resultado.');
+    return;
+  }
+
+  formulario.dataset.preguntaActual = String(preguntaActual + 1);
+  mostrarPregunta(preguntaActual + 1);
+}
+
+function mostrarPregunta(indice) {
+  const formulario = document.getElementById('cuestionario-procrastinacion');
+  const preguntas = formulario.querySelectorAll('.pregunta');
+  const porcentaje = ((indice + 1) / preguntas.length) * 100;
+
+  preguntas.forEach((pregunta, preguntaIndice) => {
+    pregunta.hidden = preguntaIndice !== indice;
+  });
+
+  document.getElementById('progreso-texto').textContent = `Pregunta ${indice + 1} de ${preguntas.length}`;
+  document.getElementById('progreso-cuestionario').style.width = `${porcentaje}%`;
+  actualizarControles(indice);
+  mostrarMensajeCuestionario('');
+}
+
+function actualizarControles(indice) {
+  const siguiente = document.getElementById('siguiente-pregunta');
+  const calcular = document.getElementById('calcular-cuestionario');
+  const formulario = document.getElementById('cuestionario-procrastinacion');
+  const respuesta = formulario.querySelector(`input[name="pregunta-${indice + 1}"]:checked`);
+  const esUltima = indice === 4;
+
+  siguiente.hidden = esUltima;
+  calcular.hidden = !esUltima;
+}
+
+/**
+ * Calcula el promedio y lo convierte a una escala de 1 a 10
+ */
+function calcularNivel() {
+  const respuestas = [];
+
+  for (let indice = 1; indice <= 5; indice += 1) {
+    const respuesta = document.querySelector(`input[name="pregunta-${indice}"]:checked`);
+    if (!respuesta) {
+      mostrarMensajeCuestionario('Responde las 5 preguntas para conocer tu resultado.');
+      return;
+    }
+    respuestas.push(Number(respuesta.value));
+  }
+
+  const promedio = respuestas.reduce((total, valor) => total + valor, 0) / respuestas.length;
+  const nivelCalculado = ((promedio - 1) / 4) * 9 + 1;
+  const nivel = Math.max(1, Math.min(10, Math.round(nivelCalculado)));
+  mostrarResultado(nivel);
+}
+
+/**
+ * Muestra el nivel, la barra y su interpretación
+ */
+function mostrarResultado(nivel) {
+  const resultado = document.getElementById('resultado-cuestionario');
+  const nivelElemento = document.getElementById('nivel-procrastinacion');
+  const progreso = document.getElementById('progreso-nivel');
+  const interpretacion = document.getElementById('interpretacion-nivel');
+  const barra = document.querySelector('.barra-nivel');
+
+  const interpretaciones = {
+    bajo: 'Nivel bajo. Sueles mantener una buena constancia con tus actividades.',
+    moderado: 'Nivel moderado. En algunas ocasiones puedes posponer actividades importantes.',
+    alto: 'Nivel alto. Puedes tener dificultades para iniciar o mantener algunas actividades a tiempo.',
+    muyAlto: 'Nivel muy alto. Posponer actividades parece ser una conducta frecuente y puede afectar tu organización.'
+  };
+
+  let texto;
+  if (nivel <= 3) texto = interpretaciones.bajo;
+  else if (nivel <= 6) texto = interpretaciones.moderado;
+  else if (nivel <= 8) texto = interpretaciones.alto;
+  else texto = interpretaciones.muyAlto;
+
+  nivelElemento.textContent = nivel;
+  progreso.style.width = `${nivel * 10}%`;
+  barra.setAttribute('aria-valuenow', nivel);
+  interpretacion.textContent = texto;
+  resultado.hidden = false;
+  resultado.classList.remove('resultado-visible');
+  requestAnimationFrame(() => resultado.classList.add('resultado-visible'));
+  mostrarMensajeCuestionario('');
+}
+
+/**
+ * Reinicia respuestas y resultado
+ */
+function reiniciarCuestionario() {
+  const formulario = document.getElementById('cuestionario-procrastinacion');
+  const invitacion = document.getElementById('invitacion-cuestionario');
+  const resultado = document.getElementById('resultado-cuestionario');
+
+  formulario.reset();
+  formulario.hidden = true;
+  formulario.dataset.preguntaActual = '0';
+  invitacion.hidden = false;
+  resultado.hidden = true;
+  resultado.classList.remove('resultado-visible');
+  document.getElementById('progreso-cuestionario').style.width = '20%';
+  document.getElementById('progreso-texto').textContent = 'Pregunta 1 de 5';
+  mostrarMensajeCuestionario('');
+}
+
+function mostrarMensajeCuestionario(mensaje) {
+  const elemento = document.getElementById('mensaje-cuestionario');
+  if (elemento) elemento.textContent = mensaje;
 }
 
 /**
@@ -148,11 +318,11 @@ function showAchievementDetail(name, index) {
  */
 function setupAnalyticsTracking() {
   // Rastrear descargas
-  document.querySelectorAll('[href*="play.google.com"], [href*="apps.apple.com"]').forEach(link => {
+  document.querySelectorAll('[href*="mediafire.com"]').forEach(link => {
     link.addEventListener('click', function() {
       analytics.trackEvent('app_download_attempt', {
         url: this.href,
-        platform: this.href.includes('play.google') ? 'Android' : 'iOS'
+        platform: 'MediaFire'
       });
     });
   });
@@ -191,7 +361,7 @@ function setupAnalyticsTracking() {
  * Copia enlace de descarga
  */
 function copyDownloadLink() {
-  const link = 'https://play.google.com/store/apps/details?id=com.lumiapp';
+  const link = 'https://www.mediafire.com/file/dhpzb7tq1xg41pf/LUMI.apk/file';
   Utils.copyToClipboard(link).then(() => {
     analytics.trackEvent('download_link_copied');
     alert('✅ Enlace de descarga copiado al portapapeles');
@@ -205,8 +375,7 @@ function copyDownloadLink() {
  */
 function openDownloadPage(platform = 'android') {
   const links = {
-    android: 'https://play.google.com/store/apps/details?id=com.lumiapp',
-    ios: 'https://apps.apple.com/app/lumi/id1234567890'
+    android: 'https://www.mediafire.com/file/dhpzb7tq1xg41pf/LUMI.apk/file'
   };
 
   analytics.trackEvent('app_download_initiated', { platform });
