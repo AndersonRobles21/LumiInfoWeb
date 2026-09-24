@@ -38,7 +38,6 @@
 
     <!-- Responsive -->
     <link rel="stylesheet" href="src/css/responsive.css" />
-
   </head>
   <body>
     <header class="site-header">
@@ -70,7 +69,16 @@
             estudiarlo y te acompaña mientras avanzas, para que puedas estudiar
             con más claridad y constancia.
           </p>
-          <a class="hero-cta" href="#descarga">Conoce la aplicacion</a>
+          <div class="hero-acciones">
+            <a class="hero-cta" href="#descarga">Conoce la aplicacion</a>
+            <a
+              class="hero-cta hero-cta-lumi"
+              href="https://andersonrobles21.github.io/LumiIa/"
+              target="_blank"
+              rel="noopener"
+              >Abrir LUMI</a
+            >
+          </div>
         </div>
         <div class="hero-imagen">
           <img
@@ -225,9 +233,9 @@
           <div class="paso-numero">01</div>
           <h3>Conoce tu situación</h3>
           <p>
-            LUMI permite conocer tus hábitos y necesidades de estudio para
-            tener una referencia de cómo estás organizando tu tiempo y
-            enfrentando tus actividades.
+            LUMI permite conocer tus hábitos y necesidades de estudio para tener
+            una referencia de cómo estás organizando tu tiempo y enfrentando tus
+            actividades.
           </p>
         </div>
 
@@ -236,8 +244,7 @@
           <h3>Organiza tus tareas</h3>
           <p>
             Registra tus actividades, fechas y horarios para tener una visión
-            clara de lo que debes realizar y evitar dejar todo para última
-            hora.
+            clara de lo que debes realizar y evitar dejar todo para última hora.
           </p>
         </div>
 
@@ -245,8 +252,8 @@
           <div class="paso-numero">03</div>
           <h3>Recibe apoyo de IA</h3>
           <p>
-            LUMI utiliza inteligencia artificial para generar planes de
-            estudio adaptados a las necesidades del aprendiz.
+            LUMI utiliza inteligencia artificial para generar planes de estudio
+            adaptados a las necesidades del aprendiz.
           </p>
         </div>
 
@@ -255,8 +262,8 @@
           <h3>Aplica técnicas de estudio</h3>
           <p>
             LUMI incorpora técnicas como Pomodoro, Active Recall, Spaced
-            Repetition, Feynman y Testing para ayudarte a estudiar de
-            diferentes maneras.
+            Repetition, Feynman y Testing para ayudarte a estudiar de diferentes
+            maneras.
           </p>
         </div>
 
@@ -361,92 +368,211 @@
       <div class="seccion-titulo">
         <span class="eyebrow">CONOCE TUS HÁBITOS</span>
         <h2>Una pausa para conocerte mejor</h2>
-        <p>Observa tus hábitos de estudio y encuentra un siguiente paso claro.</p>
+        <p>
+          Observa tus hábitos de estudio y encuentra un siguiente paso claro.
+        </p>
       </div>
 
       <div class="invitacion-cuestionario" id="invitacion-cuestionario">
         <span class="invitacion-icono">01—05</span>
         <h3>¿Te gustaría saber tu nivel de procrastinación?</h3>
-        <p>Responde 5 preguntas rápidas y descubre un nivel aproximado del 1 al 10.</p>
-        <button class="boton-cuestionario" id="iniciar-cuestionario" type="button">DESCUBRIR MI NIVEL</button>
+        <p>
+          Responde 5 preguntas rápidas y descubre un nivel aproximado del 1 al
+          10.
+        </p>
+        <button
+          class="boton-cuestionario"
+          id="iniciar-cuestionario"
+          type="button"
+        >
+          DESCUBRIR MI NIVEL
+        </button>
       </div>
 
       <form class="cuestionario" id="cuestionario-procrastinacion" hidden>
         <div class="progreso-cuestionario">
           <span id="progreso-texto">Pregunta 1 de 5</span>
-          <div class="progreso-pista"><span id="progreso-cuestionario"></span></div>
+          <div class="progreso-pista">
+            <span id="progreso-cuestionario"></span>
+          </div>
         </div>
 
         <fieldset class="pregunta" data-question="0">
           <legend>1. ¿Dejas tus tareas para el último momento?</legend>
           <div class="opciones-respuesta">
-            <label><input type="radio" name="pregunta-1" value="1" />Nunca</label>
-            <label><input type="radio" name="pregunta-1" value="2" />Casi nunca</label>
-            <label><input type="radio" name="pregunta-1" value="3" />A veces</label>
-            <label><input type="radio" name="pregunta-1" value="4" />Casi siempre</label>
-            <label><input type="radio" name="pregunta-1" value="5" />Siempre</label>
+            <label
+              ><input type="radio" name="pregunta-1" value="1" />Nunca</label
+            >
+            <label
+              ><input type="radio" name="pregunta-1" value="2" />Casi
+              nunca</label
+            >
+            <label
+              ><input type="radio" name="pregunta-1" value="3" />A veces</label
+            >
+            <label
+              ><input type="radio" name="pregunta-1" value="4" />Casi
+              siempre</label
+            >
+            <label
+              ><input type="radio" name="pregunta-1" value="5" />Siempre</label
+            >
           </div>
         </fieldset>
 
         <fieldset class="pregunta" data-question="1" hidden>
           <legend>2. ¿Te distraes fácilmente cuando estás estudiando?</legend>
           <div class="opciones-respuesta">
-            <label><input type="radio" name="pregunta-2" value="1" />Nunca</label>
-            <label><input type="radio" name="pregunta-2" value="2" />Casi nunca</label>
-            <label><input type="radio" name="pregunta-2" value="3" />A veces</label>
-            <label><input type="radio" name="pregunta-2" value="4" />Casi siempre</label>
-            <label><input type="radio" name="pregunta-2" value="5" />Siempre</label>
+            <label
+              ><input type="radio" name="pregunta-2" value="1" />Nunca</label
+            >
+            <label
+              ><input type="radio" name="pregunta-2" value="2" />Casi
+              nunca</label
+            >
+            <label
+              ><input type="radio" name="pregunta-2" value="3" />A veces</label
+            >
+            <label
+              ><input type="radio" name="pregunta-2" value="4" />Casi
+              siempre</label
+            >
+            <label
+              ><input type="radio" name="pregunta-2" value="5" />Siempre</label
+            >
           </div>
         </fieldset>
 
         <fieldset class="pregunta" data-question="2" hidden>
           <legend>3. ¿Te cuesta empezar una tarea aunque tengas tiempo?</legend>
           <div class="opciones-respuesta">
-            <label><input type="radio" name="pregunta-3" value="1" />Nunca</label>
-            <label><input type="radio" name="pregunta-3" value="2" />Casi nunca</label>
-            <label><input type="radio" name="pregunta-3" value="3" />A veces</label>
-            <label><input type="radio" name="pregunta-3" value="4" />Casi siempre</label>
-            <label><input type="radio" name="pregunta-3" value="5" />Siempre</label>
+            <label
+              ><input type="radio" name="pregunta-3" value="1" />Nunca</label
+            >
+            <label
+              ><input type="radio" name="pregunta-3" value="2" />Casi
+              nunca</label
+            >
+            <label
+              ><input type="radio" name="pregunta-3" value="3" />A veces</label
+            >
+            <label
+              ><input type="radio" name="pregunta-3" value="4" />Casi
+              siempre</label
+            >
+            <label
+              ><input type="radio" name="pregunta-3" value="5" />Siempre</label
+            >
           </div>
         </fieldset>
 
         <fieldset class="pregunta" data-question="3" hidden>
-          <legend>4. ¿Sueles retrasar actividades que consideras difíciles o aburridas?</legend>
+          <legend>
+            4. ¿Sueles retrasar actividades que consideras difíciles o
+            aburridas?
+          </legend>
           <div class="opciones-respuesta">
-            <label><input type="radio" name="pregunta-4" value="1" />Nunca</label>
-            <label><input type="radio" name="pregunta-4" value="2" />Casi nunca</label>
-            <label><input type="radio" name="pregunta-4" value="3" />A veces</label>
-            <label><input type="radio" name="pregunta-4" value="4" />Casi siempre</label>
-            <label><input type="radio" name="pregunta-4" value="5" />Siempre</label>
+            <label
+              ><input type="radio" name="pregunta-4" value="1" />Nunca</label
+            >
+            <label
+              ><input type="radio" name="pregunta-4" value="2" />Casi
+              nunca</label
+            >
+            <label
+              ><input type="radio" name="pregunta-4" value="3" />A veces</label
+            >
+            <label
+              ><input type="radio" name="pregunta-4" value="4" />Casi
+              siempre</label
+            >
+            <label
+              ><input type="radio" name="pregunta-4" value="5" />Siempre</label
+            >
           </div>
         </fieldset>
 
         <fieldset class="pregunta" data-question="4" hidden>
-          <legend>5. ¿Has dejado de cumplir una tarea por haberla pospuesto demasiado?</legend>
+          <legend>
+            5. ¿Has dejado de cumplir una tarea por haberla pospuesto demasiado?
+          </legend>
           <div class="opciones-respuesta">
-            <label><input type="radio" name="pregunta-5" value="1" />Nunca</label>
-            <label><input type="radio" name="pregunta-5" value="2" />Casi nunca</label>
-            <label><input type="radio" name="pregunta-5" value="3" />A veces</label>
-            <label><input type="radio" name="pregunta-5" value="4" />Casi siempre</label>
-            <label><input type="radio" name="pregunta-5" value="5" />Siempre</label>
+            <label
+              ><input type="radio" name="pregunta-5" value="1" />Nunca</label
+            >
+            <label
+              ><input type="radio" name="pregunta-5" value="2" />Casi
+              nunca</label
+            >
+            <label
+              ><input type="radio" name="pregunta-5" value="3" />A veces</label
+            >
+            <label
+              ><input type="radio" name="pregunta-5" value="4" />Casi
+              siempre</label
+            >
+            <label
+              ><input type="radio" name="pregunta-5" value="5" />Siempre</label
+            >
           </div>
         </fieldset>
 
-        <p class="mensaje-cuestionario" id="mensaje-cuestionario" role="alert"></p>
+        <p
+          class="mensaje-cuestionario"
+          id="mensaje-cuestionario"
+          role="alert"
+        ></p>
         <div class="acciones-cuestionario">
-          <button class="boton-cuestionario" id="siguiente-pregunta" type="button">SIGUIENTE</button>
-          <button class="boton-cuestionario" id="calcular-cuestionario" type="submit" hidden>CALCULAR MI NIVEL</button>
+          <button
+            class="boton-cuestionario"
+            id="siguiente-pregunta"
+            type="button"
+          >
+            SIGUIENTE
+          </button>
+          <button
+            class="boton-cuestionario"
+            id="calcular-cuestionario"
+            type="submit"
+            hidden
+          >
+            CALCULAR MI NIVEL
+          </button>
         </div>
       </form>
 
-      <div class="resultado-cuestionario" id="resultado-cuestionario" aria-live="polite" hidden>
-        <p class="resultado-nivel">Tu nivel aproximado de procrastinación es <strong id="nivel-procrastinacion">0</strong>/10</p>
-        <div class="barra-nivel" role="progressbar" aria-label="Nivel de procrastinación" aria-valuemin="1" aria-valuemax="10" aria-valuenow="0">
+      <div
+        class="resultado-cuestionario"
+        id="resultado-cuestionario"
+        aria-live="polite"
+        hidden
+      >
+        <p class="resultado-nivel">
+          Tu nivel aproximado de procrastinación es
+          <strong id="nivel-procrastinacion">0</strong>/10
+        </p>
+        <div
+          class="barra-nivel"
+          role="progressbar"
+          aria-label="Nivel de procrastinación"
+          aria-valuemin="1"
+          aria-valuemax="10"
+          aria-valuenow="0"
+        >
           <span id="progreso-nivel"></span>
         </div>
         <p class="interpretacion-nivel" id="interpretacion-nivel"></p>
-        <p class="aclaracion-nivel">Este resultado es únicamente orientativo y no constituye una evaluación psicológica ni un diagnóstico.</p>
-        <button class="boton-cuestionario boton-secundario" id="reiniciar-cuestionario" type="button">VOLVER A INTENTAR</button>
+        <p class="aclaracion-nivel">
+          Este resultado es únicamente orientativo y no constituye una
+          evaluación psicológica ni un diagnóstico.
+        </p>
+        <button
+          class="boton-cuestionario boton-secundario"
+          id="reiniciar-cuestionario"
+          type="button"
+        >
+          VOLVER A INTENTAR
+        </button>
       </div>
     </section>
 
@@ -472,16 +598,19 @@
             <div class="qr-content">
               <span class="qr-label">LUMI</span>
               <h3>Conoce a Lumi</h3>
-              <p>
-                Escanea el código para descargar la aplicación.
-              </p>
+              <p>Escanea el código para descargar la aplicación.</p>
             </div>
           </div>
         </div>
 
         <div class="descarga-boton">
-          <a class="boton-descarga" href="https://www.mediafire.com/file/tm76rmdvfkcgh54/LUMI.apk/file" target="_blank" rel="noopener">DESCARGAR LUMI</a>
-        </div>
+          <a
+            class="boton-descarga"
+            href="https://www.mediafire.com/file/tm76rmdvfkcgh54/LUMI.apk/file"
+            target="_blank"
+            rel="noopener"
+            >DESCARGAR LUMI</a
+          >
       </div>
     </section>
 

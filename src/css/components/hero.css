@@ -165,6 +165,22 @@
   animation: fadeInUp 1s ease-out 0.8s both;
 }
 
+.hero-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-md);
+  margin-top: var(--espacio-lg);
+}
+
+.hero-cta-lumi {
+  background: linear-gradient(135deg, var(--color-cyan-neon), var(--color-purpura-neon));
+  box-shadow: 0 12px 28px var(--color-cyan-glow);
+}
+
+.hero-cta-lumi::after {
+  content: '↗';
+}
+
 .hero-cta:hover {
   transform: translateY(-3px);
   box-shadow: 0 16px 34px rgba(189, 0, 255, 0.42);
